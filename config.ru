@@ -3,10 +3,6 @@
 # Redirects
 require 'rack/rewrite'
 
-use ::Rack::Rewrite do
-  r301 %r{\A/([\d\(\)\-\+ %]+)/?}, "#{root}/$1"
-end
-
 # Display 404
 run lambda {
   not_found_page = File.expand_path("../build/404.html", __FILE__)
