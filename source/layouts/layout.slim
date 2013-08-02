@@ -13,5 +13,24 @@ html
     header
       .symbol
       h1 ryanmunger
+      p
+        ' My name is
+        strong 
+          ' Ryan Munger.
+        ' I specialize in designing and developing handcrafted, custom web 
+        ' sites using HTML, CSS and JavaScript.
+      ul
+        li
+          a.active href="#"
+            ' Home
+        li
+          a href="#"
+            ' Work
+        li
+          a href="#"
+            ' Resume
+        li
+          a href="#"
+            ' Blog
     = yield
   = javascript_include_tag "jquery", "all"
