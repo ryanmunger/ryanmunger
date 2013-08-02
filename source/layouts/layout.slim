@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
+    meta name="HandheldFriendly" content="True"
+    meta name="MobileOptimized" content="320"
+    meta name="viewport" content="width=device-width, initial-scale=1"
+
+    title= current_page.data.title || "Ryan Munger - Front End Developer"
+    = stylesheet_link_tag "normalize", "styles"
+  body class=(page_classes)
+    header
+      .symbol
+      h1 ryanmunger
+    = yield
+  = javascript_include_tag "jquery", "all"
