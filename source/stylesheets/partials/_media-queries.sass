@@ -1,10 +1,90 @@
 @media screen and (min-width: 768px)
+  .symbol
+    +background(image-url("../images/logo.png") 0 0 no-repeat)
+    width: 40px
+    height: 40px
+    +background-size(100%)
+    +inline-block
+    float: left
+    font-weight: 800
+  header, footer
+    float: left
+    position: fixed
+    padding: 50px 0 0 20px
+    width: 289px
+  header
+    h1
+      font-size: 24px
+      text-transform: uppercase
+      color: #555
+      font-weight: 800
+      letter-spacing: 1px
+      position: relative
+      left: 16px
+      top: 6px
+      float: left
+      margin-bottom: 34px
+    p
+      clear: left
+      font-family: "Droid Serif", sans-serif
+      font-size: 14px
+      color: #999
+      padding-right: 20px
+      strong
+        color: #555
+
+    ul
+      list-style-type: none
+      margin: 0
+      padding: 0
+      font-family: "Droid Serif", sans-serif
+      li
+        border-bottom: 1px solid #e5e5e5
+        padding: 7px 0
+        &:last-child
+          border-bottom: none
+        a
+          text-decoration: none
+          color: #7fd34c
+          &.active
+            color: #555
+          &:hover
+            color: #5da9cb
+  footer
+    bottom: 0
+    left: 0
+    form
+      z-index: 5
+      label
+        font-size: 14px
+        color: #999
+        text-transform: uppercase
+        font-weight: bold
+        margin-bottom: 6px
+        +inline-block
+      input
+        width: 82%
+        border: none
+        padding: 10px
+    .social-links
+      margin: 0 0 40px 0
+      padding: 0
+      list-style-type: none
+      li
+        float: left
+        margin-right: 13px
+      a
+        +inline-block
+        text-decoration: none
+        color: #999
+        font-size: 20px
+
   .main-content
     margin-left: 300px
     background: rgba(#fff, .7)
     max-width: 560px
     width: 50%
-    padding: 114px 20px 0 20px
+    padding: 114px 20px 20px 20px
     position: relative
     z-index: 20
     img
