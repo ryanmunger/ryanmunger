@@ -1,1 +1,1 @@
-//= require_tree .
+$ ->  $('#nav-toggle').on 'click', (e) ->    e.preventDefault()    $('header ul').toggleClass('mobile-hidden')

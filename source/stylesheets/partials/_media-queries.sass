@@ -5,13 +5,12 @@
     padding-bottom: 50px
   body
     background: #c55951
-  .symbol
+  .logo
     +background(image-url("../images/logo.png") 0 0 no-repeat)
-    width: 35px
+    width: 196.5px
     height: 35px
     +background-size(100%)
     +inline-block
-    float: left
   header, footer
     float: left
     position: fixed
@@ -19,25 +18,15 @@
   header
     .tint-overlay
       background: #a04842
-    h1
-      font-size: 19px
-      text-transform: uppercase
-      color: #fff
-      letter-spacing: 2px
-      float: left
-      margin-bottom: 18px
-      position: relative
-      top: 7px
-      left: 14px
+      .down-2
+        display: none
     p
       clear: left
       font-size: 13px
-      color: #fff
+      color: #e6e6e6
       padding-right: 20px
       line-height: 21px
-      margin-top: 60px
-      strong
-        color: #555
+      margin-top: 35px
     ul
       list-style-type: none
       margin: 0 0 0 0
@@ -95,7 +84,7 @@
     background: rgba(#fff, .7)
     max-width: 560px
     width: 50%
-    padding: 114px 20px 20px 20px
+    padding: 103px 20px 20px 20px
     position: relative
     z-index: 20
     img
@@ -142,3 +131,14 @@
         span
           &.mail
             font-size: 13px
+
+@media screen and (max-width: 768px)
+  .mobile-hidden
+    display: none
+  header
+    .down-2
+      text-decoration: none
+      font-size: 24px
+      color: #ffa99b
+      position: relative
+      top: -10px

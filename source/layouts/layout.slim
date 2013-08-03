@@ -13,13 +13,13 @@ html
     header
       .tint-overlay
         .wrap
-          .symbol
-          h1 Ryan Munger
+          .logo
           p
             ' My name is Ryan Munger. I specialize in designing and 
             ' developing handcrafted, custom web sites using HTML, CSS and JavaScript.
+        a.flaticon.stroke.down-2.right#nav-toggle href="#"
       .wrap
-        ul
+        ul.mobile-hidden
           li
             a.active href="#"
               ' Home
@@ -37,18 +37,18 @@ html
     = yield
     footer
       .wrap
-        a.hire-me href="#" 
+        a.hire-me href="mailto: ryanmunger@gmail.com"
           ' Hire Me
           span.flaticon.stroke.mail
         ul.social-links
           li
-            a.flaticon.social.github href="#"
+            a.flaticon.social.github href="https://github.com/ryanmunger"
           li
-            a.flaticon.social.dribbble href="#"
+            a.flaticon.social.dribbble href="http://dribbble.com/roothewhirl"
           li
-            a.flaticon.social.linkedin href="#"
+            a.flaticon.social.linkedin href="http://www.linkedin.com/pub/ryan-munger/32/681/408"
           li
-            a.flaticon.social.rdio href="#"
+            a.flaticon.social.rdio href="http://www.rdio.com/people/ryanmunger/"
           li
-            a.flaticon.social.twitter href="#"
+            a.flaticon.social.twitter href="https://twitter.com/roothewhirl"
   = javascript_include_tag "jquery", "rainbow", "all"
