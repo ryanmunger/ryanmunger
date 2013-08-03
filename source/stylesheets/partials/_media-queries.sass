@@ -1,55 +1,60 @@
 @media screen and (min-width: 768px)
+  .wrap
+    padding: 50px 0 0 20px
+  .tint-overlay
+    padding-bottom: 50px
+  body
+    background: #c55951
   .symbol
     +background(image-url("../images/logo.png") 0 0 no-repeat)
-    width: 40px
-    height: 40px
+    width: 35px
+    height: 35px
     +background-size(100%)
     +inline-block
     float: left
-    font-weight: 800
   header, footer
     float: left
     position: fixed
-    padding: 50px 0 0 20px
-    width: 289px
+    width: 300px
   header
+    .tint-overlay
+      background: #a04842
     h1
-      font-size: 24px
+      font-size: 19px
       text-transform: uppercase
-      color: #555
-      font-weight: 800
-      letter-spacing: 1px
-      position: relative
-      left: 16px
-      top: 6px
+      color: #fff
+      letter-spacing: 2px
       float: left
-      margin-bottom: 34px
+      margin-bottom: 18px
+      position: relative
+      top: 7px
+      left: 14px
     p
       clear: left
-      font-family: "Droid Serif", sans-serif
-      font-size: 14px
-      color: #999
+      font-size: 13px
+      color: #fff
       padding-right: 20px
+      line-height: 21px
+      margin-top: 60px
       strong
         color: #555
-
     ul
       list-style-type: none
-      margin: 0
+      margin: 0 0 0 0
       padding: 0
-      font-family: "Droid Serif", sans-serif
       li
-        border-bottom: 1px solid #e5e5e5
-        padding: 7px 0
+        border-bottom: 1px solid #ffa99b
+        padding: 12px 0
         &:last-child
           border-bottom: none
         a
+          +transition(color, .3s)
           text-decoration: none
-          color: #7fd34c
+          color: #ffa99b
           &.active
-            color: #555
+            color: #7c3833
           &:hover
-            color: #5da9cb
+            color: #7c3833
   footer
     bottom: 0
     left: 0
@@ -67,17 +72,23 @@
         border: none
         padding: 10px
     .social-links
-      margin: 0 0 40px 0
+      margin: 0 0 0 0
       padding: 0
       list-style-type: none
+      text-align: center
+      position: relative
+      left: -20px
       li
-        float: left
-        margin-right: 13px
+        width: 50px
+        +inline-block
       a
         +inline-block
         text-decoration: none
-        color: #999
+        color: #ffa99b
         font-size: 20px
+        +transition(color, .3s)
+        &:hover
+          color: #7c3833
 
   .main-content
     margin-left: 300px
@@ -91,7 +102,7 @@
       position: relative
       left: -20px
   .hero-photo
-    +background(image-url("../images/me.jpg") no-repeat -200px -320px)
+    +background(image-url("../images/me.jpg") no-repeat -220px 0)
     +background-size(cover)
     width: 100%
     position: fixed
@@ -110,15 +121,24 @@
         font-family: "Droid Serif", sans-serif
         color: #999
         font-style: italic
-
-@media screen and (max-width: 1120px)
-  .hero-photo
-    background-position: -110px -210px
-
-@media screen and (max-width: 980px)
-  .hero-photo
-    background-position: -160px -80px
-
-@media screen and (max-width: 980px)
-  .hero-photo
-    background-position: -110px -25px
+    a
+      &.hire-me
+        +transition(color, .3s)
+        background: #fff
+        color: #e6877b
+        height: 40px
+        line-height: 40px
+        text-align: center
+        text-decoration: none
+        +inline-block
+        margin-bottom: 20px
+        width: 90%
+        text-transform: uppercase
+        font-weight: bold
+        letter-spacing: 1px
+        +transition(box-shadow, .3s)
+        &:hover
+          +box-shadow(0 0 5px rgba(#000, .5))
+        span
+          &.mail
+            font-size: 13px
