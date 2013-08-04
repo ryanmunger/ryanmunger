@@ -1,4 +1,6 @@
 @media screen and (min-width: 768px)
+  .desktop-hidden
+    display: none
   .wrap
     padding: 50px 0 0 20px
   .tint-overlay
@@ -61,12 +63,12 @@
         border: none
         padding: 10px
     .social-links
-      margin: 0 0 0 0
+      margin: 0 0 20px 0
       padding: 0
       list-style-type: none
       text-align: center
       position: relative
-      left: -20px
+      left: -14px
       li
         width: 50px
         +inline-block
@@ -104,12 +106,7 @@
     margin-bottom: 0
 
   footer
-    padding-bottom: 20px
-    p
-      &.copyright
-        font-family: "Droid Serif", sans-serif
-        color: #999
-        font-style: italic
+    padding: 0 20px 0 0
     a
       &.hire-me
         +transition(color, .3s)
@@ -121,7 +118,8 @@
         text-decoration: none
         +inline-block
         margin-bottom: 20px
-        width: 90%
+        margin-right: 20px
+        width: 93%
         text-transform: uppercase
         font-weight: bold
         letter-spacing: 1px
