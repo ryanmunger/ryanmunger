@@ -2,7 +2,7 @@
   .desktop-hidden
     display: none
   .wrap
-    padding: 50px 0 0 20px
+    padding: 10px 0 0 20px
   .tint-overlay
     padding-bottom: 50px
   body
@@ -19,6 +19,11 @@
     width: 300px
   header
     .tint-overlay
+      margin-bottom: 30px
+      .wrap
+        padding-left: 0
+        padding-top: 14px
+        padding-bottom: 10px
       background: #a04842
       .down-2
         display: none
@@ -45,7 +50,7 @@
           &.active
             color: #7c3833
           &:hover
-            color: #7c3833
+            color: #eee
   footer
     bottom: 0
     left: 0
@@ -79,7 +84,7 @@
         font-size: 20px
         +transition(color, .3s)
         &:hover
-          color: #7c3833
+          color: #eee
 
   .main-content
     margin-left: 300px
@@ -125,7 +130,7 @@
         letter-spacing: 1px
         +transition(box-shadow, .3s)
         &:hover
-          +box-shadow(0 0 5px rgba(#000, .5))
+          color: #a04842
         span
           &.mail
             font-size: 13px
