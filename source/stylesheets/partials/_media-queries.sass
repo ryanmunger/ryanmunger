@@ -151,8 +151,37 @@
         span
           &.mail
             font-size: 13px
+  .blog
+    .main-content
+      position: absolute
+      top: 0
+      bottom: 0
+      .blog-date
+        text-transform: uppercase
+        font-size: 20px
+        margin-top: 30px
+      .blog-article
+        a
+          color: #a04842
+          text-decoration: none
+          display: block
+          &:hover
+            text-decoration: underline
 
 @media screen and (max-width: 768px)
+  .blog
+    .main-content
+      .blog-date
+        text-transform: uppercase
+        font-size: 20px
+        margin-top: 30px
+      .blog-article
+        a
+          color: #a04842
+          text-decoration: none
+          display: block
+          &:hover
+            text-decoration: underline
   .mobile-hidden
     display: none
   header

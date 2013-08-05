@@ -1,1 +1,1 @@
-$ ->  $('#nav-toggle').on 'click', (e) ->    e.preventDefault()    $('header ul').toggleClass('mobile-hidden')
+$ ->  $("#nav-toggle").on "click", (e) ->    e.preventDefault()    $("#nav").toggleClass "mobile-hidden"
