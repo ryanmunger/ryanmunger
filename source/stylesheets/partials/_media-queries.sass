@@ -47,6 +47,7 @@
           +transition(color, .3s)
           text-decoration: none
           color: #ffa99b
+          display: block
           &.active
             color: #7c3833
           &:hover
@@ -72,13 +73,10 @@
       padding: 0
       list-style-type: none
       text-align: center
-      position: relative
-      left: -14px
       li
         width: 50px
         +inline-block
       a
-        +inline-block
         text-decoration: none
         color: #ffa99b
         font-size: 20px
@@ -94,9 +92,12 @@
     padding: 103px 20px 20px 20px
     position: relative
     z-index: 20
+    +clearfix
     img
       position: relative
       left: -20px
+    h2
+      margin-top: 0
   .hero-photo
     +background(image-url("../images/me.jpg") no-repeat -220px 0)
     +background-size(cover)
@@ -109,6 +110,22 @@
     left: 300px
   .copyright
     margin-bottom: 0
+
+  .left-col
+    width: 20%
+    float: left
+
+  .right-col
+    width: 80%
+    float: right
+
+  #experience, #skills
+    +clearfix
+    margin-top: 50px
+    p, h3
+      margin-top: 0
+    p
+      margin-bottom: 25px
 
   footer
     padding: 0 20px 0 0
@@ -124,7 +141,7 @@
         +inline-block
         margin-bottom: 20px
         margin-right: 20px
-        width: 93%
+        width: 100%
         text-transform: uppercase
         font-weight: bold
         letter-spacing: 1px
