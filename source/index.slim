@@ -1,57 +1,68 @@
 .main-content
   section#single-blog-post
-    h2 Conditionally Adding Active Nav States with Ruby in Middleman
-    h3 Posted on August 5th 2013
+    h2 Pure CSS Speech Bubbles
+    h3 Posted on September 4th 2013
     p
-      ' While working on my personal site recently, I ran into a problem with
-      ' adding an active class via a link being clicked in my main navigation.
-      ' Using just plain ol' jQuery provided a way to add an "active" class based on a click event,
-      ' however, everytime a new page loaded, the DOM would refresh and I would lose the
-      ' active state almost immediately.
+      ' Speech bubbles are a pretty common pattern in web design, especially for tooltip pop ups.
+      ' Having to save out a small triangle shape and attach it to the outside of the rounded
+      ' speech bubble are can become a bit cumbersome, so here is a way to create one from pure CSS.
     p
-      ' After a bit of research, I decided this would be best handled with one of Middleman's
-      ' built in 
-      a href="http://rubydoc.info/github/middleman/middleman/Middleman/Sitemap/InstanceMethods:current_page" 
-        | current_page
-      '  variable
-    p
-      ' More specifically:
-      ul
-        li
-          code
-            | current_page.path
-          ' which will return the path relative to the source directory (eg. if you have an about.html 
-          ' file in your source folder, this will return about.html).
-        li
-          code
-            | current_page.url
-          ' which will return the path without the actual directory indexy (eg. if you are in the path 
-          ' about/index.html, only about will be returned).
-    p
-      ' So, armed with this knowledge and a simple if statement, lets dive into some code:
-
+      ' As always, we'll start off with some simple markup and transform it into our speech bubble using
+      ' CSS rounded corners and pseudo elements.
     pre
       .code-wrap
         code data-language="html"
-          ' <ul class="nav">
-              <li>
-                <a href="/" class="&#35;{'active' if current_page.url == '/'}">Home</a>
-              </li>
-              <li>
-                <a href="resume.html" class="&#35;{'active' if current_page.url == 'resume.html'}">Resume</a>
-              </li>
-              <li>
-                <a href="blog.html" class="&#35;{'active' if current_page.url == 'blog.html'}">Blog</a>
-              </li>
-            </ul>
+          ' <div class="speech-bubble">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing 
+                elit. Duis sed sapien ultricies enim elementum porttitor 
+                at mattis mi. Cras vehicula.
+              </p>
+            </div>
     p
-      ' With the code above, we are simply conditionally adding the "active" class to any of the links
-      ' if the path in the url matches the correct criteria. With this approach we don't have to worry
-      ' about the DOM getting flushed out everytime a link is clicked, since the behavior is tied to the
-      ' current url in the browser's address bar.
+      ' The above HTML is about as simple as a markup pattern can get. Feel free to optionally add a header element with
+      ' an h1 or h2 in it to create some heading text.
+    p
+      ' Next up, were going to add our CSS, this will include an absolutely positioned pseudo-element with a unicode
+      ' triangle character as it's content.
+    pre
+      .code-wrap
+        code data-language="css"
+          ' .speech-bubble {
+              width: 25%;
+              background: #fff;
+              border-radius: 10px;
+              border: 1px solid #ccc;
+              padding: 10px;
+              position: relative;
+            }
 
+            .speech-bubble:after {
+              content: '\25bc';
+              position: absolute;
+              bottom: -17px;
+              right: 18px;
+              color: #fff;
+              text-shadow: 1px 1px 0 #ccc, -1px 1px 0 #ccc;
+            }
+
+    p
+      ' The only slight issue I see with this solution, is the fact that the arrow (having used text-shadow to
+      ' create the faux border) doesn't look exactly pointed at the bottom, but it's not a totally noticeable
+      ' issue.
+
+    p
+      ' Keep in mind you can always use an arrow pointing in a different direction. Then, with the absolute positioning
+      ' you can change the location of it relative to the bubble container.
+
+    p
+      ' Click here for a live
+      a href="http://codepen.io/ryanmunger/pen/CEkrn"
+        | demo.
     p
       ' Feel free to send any comments, questions or improvements
       a href="mailto: ryanmunger@gmail.com"
         | here
       | .
+    a.previous-post href="conditionally-add-active-states-middleman.html"
+      | « Previous Post
