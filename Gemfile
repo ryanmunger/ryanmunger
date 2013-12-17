@@ -7,6 +7,7 @@ gem "slim"
 gem "bourbon"
 gem "thin"
 gem 'rack-rewrite', '~> 1.2.1'
+gem 'newrelic_rpm'
 
 # For faster file watcher updates:
 # gem "wdm", "~> 0.1.0") # Windows
