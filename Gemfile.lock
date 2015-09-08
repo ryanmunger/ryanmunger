@@ -106,3 +106,6 @@ DEPENDENCIES
   ruby18_source_location
   slim
   thin
+
+BUNDLED WITH
+   1.10.3
