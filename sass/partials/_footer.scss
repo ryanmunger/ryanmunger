@@ -1,0 +1,82 @@
+footer {
+  bottom: 0;
+  left: 0;
+  padding: 0 20px;
+
+  form {
+    z-index: 5;
+
+    label {
+      font-size: 14px;
+      color: #999;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: 6px;
+      display: inline-block;
+    }
+
+    input {
+      width: 82%;
+      border: none;
+      padding: 10px;
+    }
+  }
+
+  .social-links {
+    margin: 0 0 20px 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+    position: relative;
+    left: -2px;
+
+    li {
+      width: 20%;
+      display: inline-block;
+    }
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      color: #bbb;
+      font-size: 20px;
+      transition: color .3s;
+
+      &:hover {
+        color: #999;
+      }
+    }
+  }
+
+  a {
+    &.hire-me {
+      box-sizing: border-box;
+      transition: color .3s;
+      background: #a04842;
+      color: #fff;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      width: 100%;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+      &:hover {
+        color: #eee;
+      }
+
+      i {
+        margin-left: 12px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-hidden {
+    display: none;
+  }
+}
