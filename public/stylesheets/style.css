@@ -2845,6 +2845,8 @@ footer {
     #experience p, #skills p {
       margin-bottom: 40px;
       margin-top: 15px; }
+  #skills p {
+    margin-top: 0; }
   footer {
     padding: 0 20px 0 0; }
     footer a.hire-me {
