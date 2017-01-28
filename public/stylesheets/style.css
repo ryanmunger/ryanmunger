@@ -2585,7 +2585,7 @@ hr {
 #resume .date {
   color: #666;
   font-size: 14px;
-  margin: 10px 0; }
+  margin: 3px 0 18px 0; }
 
 #resume a {
   text-decoration: none;
@@ -2843,7 +2843,8 @@ footer {
     #experience p, #experience h3, #skills p, #skills h3 {
       margin-top: 0; }
     #experience p, #skills p {
-      margin-bottom: 25px; }
+      margin-bottom: 40px;
+      margin-top: 15px; }
   footer {
     padding: 0 20px 0 0; }
     footer a.hire-me {
@@ -2908,7 +2909,7 @@ footer {
   #resume p {
     margin-top: 0; }
   #resume .right-col p {
-    margin-bottom: 14px; }
+    margin-bottom: 35px; }
     #resume .right-col p:last-of-type {
       margin-bottom: 0; }
   #resume .right-col h3 {
