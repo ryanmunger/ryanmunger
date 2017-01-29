@@ -1,1 +1,0 @@
-$ ->  $("#nav-toggle").on "click", (e) ->    e.preventDefault()    $("#nav").toggleClass "mobile-hidden"
