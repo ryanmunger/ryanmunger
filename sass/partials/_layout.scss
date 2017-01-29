@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+.hidden {
+  display: none;
+}
+
+.right {
+  float: right;
+}
+
+img {
+  max-width: 100%;
+}
+
+hr {
+  margin: 0 20px 20px 20px;
+  background: #ddd;
+  border: none;
+  height: 1px;
+}
+
+#resume {
+  .name {
+    font-size: 18px;
+    color: #a04842;
+    text-transform: uppercase;
+    margin-top: 28px;
+  }
+
+  .title {
+    font-size: 14px;
+    color: #333;
+  }
+
+  .label {
+    font-family: "Roboto Slab", sans-serif;
+    font-style: italic;
+    font-size: 14px;
+    color: #a04842;
+    font-weight: bold;
+  }
+
+  h3, h4, .date {
+    margin: 0;
+  }
+
+  .date {
+    color: #666;
+    font-size: 14px;
+    margin: 3px 0 18px 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: #a04842;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  #skills {
+    p {
+      margin-bottom: 14px;
+    }
+  }
+}
