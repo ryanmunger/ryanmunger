@@ -254,14 +254,12 @@
       max-width: 100%;
     }
 
-    h2 {
-      a {
-        color: #333;
-        text-decoration: none;
+    a {
+      color: #333;
+      text-decoration: none;
 
-        &:hover {
-          text-decoration: underline;
-        }
+      &:hover {
+        text-decoration: underline;
       }
     }
 
