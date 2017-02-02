@@ -2544,8 +2544,10 @@ table {
 * {
   box-sizing: border-box; }
 
-html {
+body {
   overflow-y: scroll; }
+  body.nav-open {
+    overflow: hidden; }
 
 .hidden {
   display: none; }
@@ -2720,13 +2722,9 @@ footer {
     footer a.hire-me i {
       margin-left: 12px; }
 
-@media screen and (max-width: 768px) {
-  .mobile-hidden {
-    display: none; } }
-
 @media screen and (min-width: 769px) {
   .desktop-hidden {
-    display: none; }
+    display: none !important; }
   .wrap {
     padding: 10px 0 0 20px; }
   .tint-overlay {
@@ -2743,6 +2741,8 @@ footer {
     float: left;
     position: fixed;
     width: 300px; }
+  header #nav li:nth-child(2) {
+    border-bottom: none; }
   header .tint-overlay {
     margin-bottom: 30px;
     background: #a04842; }
@@ -2898,16 +2898,45 @@ footer {
     max-width: 100%; } }
 
 @media screen and (max-width: 768px) {
-  .mobile-hidden {
-    display: none; }
   header #nav-toggle {
     text-decoration: none;
     font-size: 18px;
     color: #ffa99b;
     position: relative;
     top: -30px; }
-  header #nav li a {
-    display: block; }
+  header #nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    margin: 0;
+    background: rgba(197, 89, 81, 0.99);
+    transition: all .3s ease-in-out; }
+    header #nav.mobile-hidden {
+      transform: scale(0);
+      opacity: 0; }
+    header #nav .close {
+      color: #ffa99b;
+      position: absolute;
+      right: 19px;
+      top: 28px;
+      font-size: 22px; }
+      header #nav .close:hover {
+        cursor: pointer; }
+    header #nav .nav-wrapper {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%; }
+    header #nav li {
+      border-bottom: none;
+      font-size: 20px;
+      margin-bottom: 14px; }
+      header #nav li a {
+        display: block;
+        padding-left: 0; }
   header p {
     display: none; }
   #resume .label {

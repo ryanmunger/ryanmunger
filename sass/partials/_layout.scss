@@ -2,8 +2,11 @@
   box-sizing: border-box;
 }
 
-html {
+body {
   overflow-y: scroll;
+  &.nav-open {
+    overflow: hidden;
+  }
 }
 
 .hidden {

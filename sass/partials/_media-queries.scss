@@ -1,6 +1,6 @@
 @media screen and (min-width: 769px) {
   .desktop-hidden {
-    display: none;
+    display: none !important; // important because it's a helper
   }
 
   .wrap {
@@ -31,6 +31,14 @@
   }
 
   header {
+    #nav {
+      li {
+        &:nth-child(2) {
+          border-bottom: none;
+        }
+      }
+    }
+
     .tint-overlay {
       margin-bottom: 30px;
 
@@ -292,10 +300,6 @@
 
 @media screen and (max-width: 768px) {
 
-  .mobile-hidden {
-    display: none;
-  }
-
   header {
     #nav-toggle {
       text-decoration: none;
@@ -306,9 +310,42 @@
     }
 
     #nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      text-align: center;
+      margin: 0;
+      background: rgba(197,89,81,.99);
+      transition: all .3s ease-in-out;
+      &.mobile-hidden {
+        transform: scale(0);
+        opacity: 0;
+      }
+      .close {
+        color: #ffa99b;
+        position: absolute;
+        right: 19px;
+        top: 28px;
+        font-size: 22px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .nav-wrapper {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+      }
       li {
+        border-bottom: none;
+        font-size: 20px;
+        margin-bottom: 14px;
         a {
           display: block;
+          padding-left: 0;
         }
       }
     }

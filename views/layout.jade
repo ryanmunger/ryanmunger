@@ -17,13 +17,17 @@ html
             | I am a Front-End Developer who specializes in HTML, CSS and JavaScript. 
             | I have 6 over years of experience designing and building web applications.
         a.right#nav-toggle(href="#")
-          i.fa.fa-chevron-down
+          i.fa.fa-bars
       .wrap
         ul.mobile-hidden#nav
-          li
-            a(href="/" class=title === 'Resume' ? 'active' : undefined) Resume
-          li
-            a(href="/portfolio" class=title === 'Portfolio' ? 'active' : undefined) Portfolio
+          i.fa.fa-times.close.desktop-hidden(aria-hidden="true")
+          .nav-wrapper
+            li
+              a(href="/" class=title === 'Resume' ? 'active' : undefined) Resume
+            li
+              a(href="/portfolio" class=title === 'Portfolio' ? 'active' : undefined) Portfolio
+            li.desktop-hidden
+              a(href="mailto:ryanmunger@gmail.com") Hire Me
     .hero-photo
     block content
     hr.desktop-hidden
@@ -47,7 +51,4 @@ html
           li
             a(href="https://soundcloud.com/ryanmunger")
               i.fa.fa-soundcloud(aria-hidden="true")
-  script(src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous")
   script(src="/javascripts/scripts.js")
