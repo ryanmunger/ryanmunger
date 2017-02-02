@@ -252,6 +252,9 @@
       margin: 0 auto 10px auto;
       left: 0;
       max-width: 100%;
+      &.project-dash {
+        margin-bottom: 22px;
+      }
     }
 
     a {
@@ -354,20 +357,23 @@
       margin-top: 0;
     }
 
+    .project-dash {
+      margin-bottom: 22px;
+    }
+
     img {
       display: block;
       margin: 0 auto 10px auto;
       left: 0;
     }
 
-    h2 {
-      a {
-        color: #333;
-        text-decoration: none;
 
-        &:hover {
-          text-decoration: underline;
-        }
+    a {
+      color: #333;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
       }
     }
 

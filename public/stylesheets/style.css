@@ -2877,6 +2877,8 @@ footer {
       margin: 0 auto 10px auto;
       left: 0;
       max-width: 100%; }
+      .portfolio-item img.project-dash {
+        margin-bottom: 22px; }
     .portfolio-item a {
       color: #333;
       text-decoration: none; }
@@ -2929,14 +2931,16 @@ footer {
     margin-top: 40px; }
     .portfolio-item.first {
       margin-top: 0; }
+    .portfolio-item .project-dash {
+      margin-bottom: 22px; }
     .portfolio-item img {
       display: block;
       margin: 0 auto 10px auto;
       left: 0; }
-    .portfolio-item h2 a {
+    .portfolio-item a {
       color: #333;
       text-decoration: none; }
-      .portfolio-item h2 a:hover {
+      .portfolio-item a:hover {
         text-decoration: underline; }
     .portfolio-item h3 + p {
       margin-top: 0; }
