@@ -300,6 +300,22 @@
 
 @media screen and (max-width: 768px) {
 
+  .mobile-headshot {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+  }
+
+  .main-content {
+    background: #fff;
+  }
+
+  .wrapper {
+    padding-top: 0;
+    z-index: 2;
+    position: relative;
+  }
+
   header {
     #nav-toggle {
       text-decoration: none;
@@ -313,12 +329,12 @@
       position: absolute;
       top: 0;
       left: 0;
-      right: 0;
-      bottom: 0;
       text-align: center;
       margin: 0;
       background: rgba(197,89,81,.99);
       transition: all .3s ease-in-out;
+      width: 100%;
+      height: 100vh;
       &.mobile-hidden {
         transform: scale(0);
         opacity: 0;
@@ -335,9 +351,9 @@
       }
       .nav-wrapper {
         position: absolute;
+        width: 100%;
         top: 50%;
         transform: translateY(-50%);
-        width: 100%;
       }
       li {
         border-bottom: none;
@@ -346,6 +362,7 @@
         a {
           display: block;
           padding-left: 0;
+          -webkit-tap-highlight-color: transparent;
         }
       }
     }
@@ -355,6 +372,7 @@
   }
 
   #resume {
+    background: #fff;
     .label {
       font-size: 18px;
       margin-top: 40px;

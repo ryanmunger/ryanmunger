@@ -2898,6 +2898,16 @@ footer {
     max-width: 100%; } }
 
 @media screen and (max-width: 768px) {
+  .mobile-headshot {
+    position: fixed;
+    z-index: 1;
+    width: 100%; }
+  .main-content {
+    background: #fff; }
+  .wrapper {
+    padding-top: 0;
+    z-index: 2;
+    position: relative; }
   header #nav-toggle {
     text-decoration: none;
     font-size: 18px;
@@ -2908,12 +2918,12 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
     text-align: center;
     margin: 0;
     background: rgba(197, 89, 81, 0.99);
-    transition: all .3s ease-in-out; }
+    transition: all .3s ease-in-out;
+    width: 100%;
+    height: 100vh; }
     header #nav.mobile-hidden {
       transform: scale(0);
       opacity: 0; }
@@ -2927,36 +2937,39 @@ footer {
         cursor: pointer; }
     header #nav .nav-wrapper {
       position: absolute;
+      width: 100%;
       top: 50%;
-      transform: translateY(-50%);
-      width: 100%; }
+      transform: translateY(-50%); }
     header #nav li {
       border-bottom: none;
       font-size: 20px;
       margin-bottom: 14px; }
       header #nav li a {
         display: block;
-        padding-left: 0; }
+        padding-left: 0;
+        -webkit-tap-highlight-color: transparent; }
   header p {
     display: none; }
-  #resume .label {
-    font-size: 18px;
-    margin-top: 40px;
-    margin-bottom: 15px; }
-  #resume p {
-    margin-top: 0; }
-  #resume .right-col p {
-    margin-bottom: 35px; }
-    #resume .right-col p:last-of-type {
-      margin-bottom: 0; }
-  #resume .right-col h3 {
-    margin-top: 14px; }
-  #resume .title {
-    margin-bottom: 15px; }
-  #resume .label {
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 14px;
-    margin-bottom: 10px; }
+  #resume {
+    background: #fff; }
+    #resume .label {
+      font-size: 18px;
+      margin-top: 40px;
+      margin-bottom: 15px; }
+    #resume p {
+      margin-top: 0; }
+    #resume .right-col p {
+      margin-bottom: 35px; }
+      #resume .right-col p:last-of-type {
+        margin-bottom: 0; }
+    #resume .right-col h3 {
+      margin-top: 14px; }
+    #resume .title {
+      margin-bottom: 15px; }
+    #resume .label {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 14px;
+      margin-bottom: 10px; }
   .portfolio-item {
     margin-bottom: 40px;
     margin-top: 40px; }
