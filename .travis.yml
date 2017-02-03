@@ -1,6 +1,8 @@
 language: node_js
 node_js:
 - '6'
+script:
+  - npm run newrelic-key
 deploy:
   provider: heroku
   api_key:
@@ -8,3 +10,5 @@ deploy:
   app: ryanmunger
   on:
     repo: ryanmunger/ryanmunger
+env:
+  secure: AUQDTaweE8Wh7x177sQYIGpQVApK1sx9azFX7BW2XrrxjJHvHtFD6Q3u+a2Oj4fY3dm4rc2W0pIYdFD1Wb/UcIS0AsI+//1uqpTo2eHi5vMdVGalwQu/eWmgyJvCXUBxWeFH2HetgmVZ56uNcXeTkvevnFvb7mljK2NMCm+T4dtA7qFVcQEiu8CqvDnqrRu26YJ//hdmuulSU2ZchhjZa+CUMrROLepRXQlpxpcEkymJtj+4moQDtG1Qa4UxoChSTCJ9MyfOlWH7eVGnbXPNK2mcfPlQrmqQPZzhY+1DRD17djYsSdqRMdB8nxdfet+wibMvlkfaSxnb5uj10OvjnP+XLEmLi5429V0vTcKlSFHz8JBt5gH8bxGxn3+AYP8q3MYoQuQhKy1ysbdnz61Re6WOL8dWzMeX72Xdql+nQEByRYA1qZnIHSNyUzY+dDUTy/jlFkFqR+BdMprz1WWy1d+QvlaIV9uH+Sx6IN2jGFHneBKCJ0HEbau9rpmbAUZ8GRgRAdUmyZ6D3vAUXpUAJUL00EMm4aWLlCaD3/uNTQ4htwcuwjXh/dDuiEnk0Mgtu6JUnC7t1PAMhLEDY9Kps4du+6AfgUrIm8YOUqZtRqizYA2J2BY9ej9FJDY+aybOgXCHvlouTmYTMSIyxjhXk1aAVup+Ss6J+sPkHAjIOPc=
