@@ -23,7 +23,7 @@ wrapper.style.paddingTop = mobileHeadshotHeight;
 
 window.addEventListener('resize', function(e) {
   var mobileHeadshotHeight = getComputedStyle(mobileHeadshot).getPropertyValue('height');
-  if (window.innerWidth < 768) {
+  if (window.innerWidth < 769) {
     wrapper.style.paddingTop = mobileHeadshotHeight;
   } else {
     wrapper.style.paddingTop = 0;
