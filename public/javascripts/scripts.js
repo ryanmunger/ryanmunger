@@ -35,3 +35,5 @@ window.addEventListener('scroll', function(e) {
     mobileHeadshot.style.transform = 'scale(' + (1 + (Math.abs(document.body.scrollTop) / 100)) / 1 + ')';
   }
 });
+
+console.log('');
