@@ -6,6 +6,7 @@ var mobileHeadshot = document.querySelector('.mobile-headshot');
 var mobileHeadshotHeight = getComputedStyle(mobileHeadshot).getPropertyValue('height');
 
 navToggle.addEventListener('click', function(e) {
+  e.preventDefault();
   nav.className = '';
   document.body.className = 'nav-open';
   document.ontouchmove = function(e){
@@ -14,6 +15,7 @@ navToggle.addEventListener('click', function(e) {
 });
 
 closeNav.addEventListener('click', function(e) {
+  e.preventDefault();
   nav.className = 'mobile-hidden';
   document.body.className = '';
   document.ontouchmove = function(e) {}
