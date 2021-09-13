@@ -1,22 +1,28 @@
 {
   "name": "ryanmunger",
-  "version": "0.0.0",
-  "private": true,
+  "version": "2.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "node ./bin/www",
-    "gulp": "gulp"
+    "start": "webpack ./src/index.js --output-path bin --watch --mode development",
+    "build": "webpack ./src/index.js --output-path bin --mode production"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanmunger/ryanmunger.git"
+  },
+  "keywords": [],
+  "author": "Ryan Munger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryanmunger/ryanmunger/issues"
+  },
+  "homepage": "https://github.com/ryanmunger/ryanmunger#readme",
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "cookie-parser": "~1.3.5",
-    "debug": "~2.2.0",
-    "express": "^4.16.4",
-    "gulp": "^3.9.1",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.4",
-    "jade": "~1.11.0",
-    "morgan": "^1.9.1",
-    "newrelic": "^1.36.2",
-    "serve-favicon": "^2.5.0"
+    "mithril": "^2.0.4"
+  },
+  "devDependencies": {
+    "webpack": "^5.52.1",
+    "webpack-cli": "^4.8.0"
   }
 }
